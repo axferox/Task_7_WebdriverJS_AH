@@ -8,7 +8,7 @@ class HomePage extends BasePage {
         this.titleName = "Albert Heijn: boodschappen doen bij de grootste supermarkt";
     }
 
-    getMenuLoginButton() {
+    get menuLoginButton() {
       return getElementByLocator("xpath", '//*[@id="menu_personal"]/li[2]/a/span');
     };
 }

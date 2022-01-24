@@ -18,28 +18,28 @@ async function sleep() {
     return await driver.sleep(10000);
 }
 
-async function getElementByLocator(locatorType, locatorName) {
+function getElementByLocator(locatorType, locatorName) {
     // await driver.wait(until.elementLocated(By[locatorType](locatorName), waitMilliseconds));
     return driver.findElement(By[locatorType](locatorName));
 }
 
-async function getCurrentUrl() {
+function getCurrentUrl() {
   return driver.getCurrentUrl();
 }
 
-async function sendKeys(element, text) {
+function sendKeys(element, text) {
   return element.sendKeys(text);
 }
 
-async function isElementSelected(element) {
+function isElementSelected(element) {
   return element.isSelected();
 }
 
-async function getElementText(element) {
+function getElementText(element) {
   return element.getText();
 }
 
-async function elementClick(element) {
+function elementClick(element) {
   return element.click();
 }
 

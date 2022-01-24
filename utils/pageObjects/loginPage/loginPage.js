@@ -7,7 +7,7 @@ class LogInPage extends BasePage {
         this.path = "/mijn/inloggen?ref=%2F";
     }
 
-    getSignUpLink() {
+    get signUpLink() {
       return getElementByLocator("xpath", '//*[@id="app"]/div/main/div/div/div/div[2]/div[3]/div/footer/p[1]/a/span');
     };
 }
