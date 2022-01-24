@@ -6,11 +6,11 @@ class CookiePopupPage extends BasePage {
         super();
     }
 
-    get cookiePopupModal() {
+    getCookiePopupModal() {
       return getElementByLocator("id", 'cookie-popup');
     }
 
-    get acceptButton() {
+    getAcceptButton() {
       return getElementByLocator("id", 'accept-cookies');
     }
 }

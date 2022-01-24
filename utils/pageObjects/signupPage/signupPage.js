@@ -7,74 +7,74 @@ class SignUpPage extends BasePage {
         this.path = "/mijn/inschrijven/bestellen?ref=%2F";
     }
 
-    get maleButton() {
+    getMaleButton() {
       return getElementByLocator("xpath", '//*[@id="app"]/div/main/div/div/div/form/div[1]/span[2]/label');
     }
 
-    get femaleButton() {
+    getFemaleButton() {
       return getElementByLocator("xpath", '//*[@id="app"]/div/main/div/div/div/form/div[1]/span[1]/label');
     }
 
-    get firstName() {
+    getFirstName() {
       return getElementByLocator("name", 'firstName');
     }
 
-    get lastName() {
+    getLastName() {
       return getElementByLocator("name", 'lastName');
     }
 
-    get postalCodeNld() {
+    getPostalCodeNld() {
       return getElementByLocator("name", 'address.postalCodeNld');
     }
 
-    get houseNumber() {
+    getHouseNumber() {
       return getElementByLocator("name", 'address.houseNumber');
     }
-    get houseNumberExtra() {
+    getHouseNumberExtra() {
       return getElementByLocator("name", 'address.houseNumberExtra');
     }
 
-    get emailAddress() {
+    getEmailAddress() {
       return getElementByLocator("name", 'emailAddress');
     }
 
-    get password() {
+    getPassword() {
       return getElementByLocator("name", 'password');
     }
 
-    get phoneNumberNl() {
+    getPhoneNumberNl() {
       return getElementByLocator("css", '#phoneNumberWebshop');
     }
 
-    get birthDay() {
+    getBirthDay() {
       return getElementByLocator("css", '#dateOfBirthWebshop');
     }
 
-    get radioOptOut() {
+    getRadioOptOut() {
       return getElementByLocator("xpath", '//*[@for="f-radio-button-bonusCardChoice-optOut"]');
     }
 
-    get radioRequest() {
+    getRadioRequest() {
       return getElementByLocator("xpath", '//*[@for="f-radio-button-bonusCardChoice-request"]');
     }
 
-    get radioInput() {
+    getRadioInput() {
       return getElementByLocator("xpath", '//*[@for="f-radio-button-bonusCardChoice-input"]');
     }
 
-    get checkboxServiceMail() {
+    getCheckboxServiceMail() {
       return getElementByLocator("xpath", '//*[@for="f-checkbox-serviceMail"]');
     }
 
-    get bonusCardNumberField() {
+    getBonusCardNumberField() {
       return getElementByLocator("xpath", '//*[@id="cards.BO"]');
     }
 
-    get checkboxMail() {
+    getCheckboxMail() {
       return getElementByLocator("xpath", '//*[@for="f-checkbox-newsLetter"]');
     }
 
-    get registrationSubmitButton() {
+    getRegistrationSubmitButton() {
       return getElementByLocator("id", "registration-form-submit");
     }
 }
