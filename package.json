@@ -21,6 +21,7 @@
   "homepage": "https://github.com/axferox/Task_7_WebdriverJS_AH#readme",
   "dependencies": {
     "geckodriver": "^2.0.4",
+    "randomstring": "^1.2.2",
     "selenium-webdriver": "^4.1.1"
   },
   "devDependencies": {
