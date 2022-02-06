@@ -1,4 +1,4 @@
-const { BaseElement } = require('../baseElements/baseElement');
+const { BaseElement } = require('../baseElement/baseElement');
 const { BasePage } = require('../basePage/basePage');
 
 class SignUpPage extends BasePage {

@@ -1,5 +1,5 @@
-const { until } = require('selenium-webdriver');
 const { driver } = require('../../webdriverConfigs/chromeDriver');
+const { DriverUtils } = require('../../driverUtils/driverUtils');
 
 class BaseElement {
   constructor(locator) {
@@ -10,12 +10,8 @@ class BaseElement {
     return driver.findElement(this.locator);
   }
 
-  wait() {
-    driver.wait(until.elementIsVisible(this.locator), 10000);
-  }
-
   textInput(inputData) {
-    return this.findElement().sendKeys(inputData);
+    this.findElement().sendKeys(inputData);
   }
 
   isSelected() {
@@ -27,7 +23,7 @@ class BaseElement {
   }
 
   click() {
-    this.wait();
+    DriverUtils.wait(this.locator);
     return this.findElement(this.locator).click();
   }
 }

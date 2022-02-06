@@ -13,16 +13,8 @@ class BasePage {
     return `${this.baseUrl}${this.path}`;
   }
 
-  getCurrentUrl() {
-    return driver.getCurrentUrl();
-  }
-
   open() {
-    return driver.get(`${this.baseUrl}${this.path}`);
-  }
-
-  getTitle() {
-    return driver.getTitle();
+    driver.get(`${this.baseUrl}${this.path}`);
   }
 
   waitUntilTitleIsLoaded(title) {

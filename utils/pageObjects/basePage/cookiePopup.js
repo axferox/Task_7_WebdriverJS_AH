@@ -1,5 +1,5 @@
 const { BasePage } = require('./basePage');
-const { BaseElement } = require('../baseElements/baseElement');
+const { BaseElement } = require('../baseElement/baseElement');
 
 class CookiePopupPage extends BasePage {
   constructor() {

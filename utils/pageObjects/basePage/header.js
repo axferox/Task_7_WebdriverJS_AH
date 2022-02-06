@@ -1,4 +1,4 @@
-const { BaseElement } = require('../baseElements/baseElement');
+const { BaseElement } = require('../baseElement/baseElement');
 
 class Header {
   constructor() {

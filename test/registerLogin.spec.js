@@ -2,6 +2,7 @@ const { expect } = require('chai');
 const { PageFactory } = require('../utils/pageFactory');
 const { chromeConfig, sleep, quit } = require('../utils/webdriverConfigs/chromeDriver');
 const { TestData } = require('../utils/testData/testData');
+const { DriverUtils } = require('../utils/driverUtils/driverUtils');
 
 const homePage = PageFactory.getPage('Home');
 const signUpPage = PageFactory.getPage('Sign up');
@@ -21,12 +22,11 @@ describe('Test performs the testing of the login and sign up forms', () => {
     const title = 'Albert Heijn: boodschappen doen bij de grootste supermarkt';
     await homePage.open();
     await homePage.waitUntilTitleIsLoaded(title);
-    expect(await cookiePopup.getTitle()).equal(title);
+    expect(await DriverUtils.getTitle()).equal(title);
   });
 
   it('Verify that cookie modal is opened and Accept button contains the text ', async () => {
     const expectedButtonText = 'Accepteer';
-    await cookiePopup.cookiePopupModal.wait();
     expect(await cookiePopup.acceptButton.getElementText()).equal(expectedButtonText);
   });
 
@@ -41,7 +41,7 @@ describe('Test performs the testing of the login and sign up forms', () => {
 
   it('Verify that user is landed on login screen after click on login button', async () => {
     await homePage.Header.menuLoginButton.click();
-    expect(await logInPage.getCurrentUrl()).equal(logInPage.getPageUrl());
+    expect(await DriverUtils.getCurrentUrl()).equal(logInPage.getPageUrl());
   });
 
   it('Verify that page contains user sign up link text matches the expected', async () => {
@@ -51,7 +51,7 @@ describe('Test performs the testing of the login and sign up forms', () => {
 
   it('Verify that user is landed on sign up page after click', async () => {
     await logInPage.signUpLink.click();
-    expect(await signUpPage.getCurrentUrl()).equal(signUpPage.getPageUrl());
+    expect(await DriverUtils.getCurrentUrl()).equal(signUpPage.getPageUrl());
   });
 
   it('Verify that radiobuttons is present and unticked by default', async () => {
